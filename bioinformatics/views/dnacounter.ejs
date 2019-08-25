@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bioinformatics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Roboto:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">Bioinformatics</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/dnacounter">DNA Counter</a></li>
+            <li><a href="/gc">GC Calculator</a></li>
+            <li><a href="/revcomp">Reverse Complementary</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <!-- form 을 만든다 action="/dnacounter" method="get"-->
+            <!-- textarea 의 id="seq" name="seq" rows="" 와 cols="" 는 적당한 숫자로 만들어본다 -->
+            <!-- button 의 id="countBtn" 으로 만들어본다-->
+          <!-- form 을 닫는다 -->
+          <!-- button 의 id="removeBtn" 으로 만들어본다 -->
+        </div>
+        <br>
+        <div class="row">
+          <p>A: <%= cntA %></p>
+          <!-- C, G, T 도 참고하여 만든다 -->
+        </div>
+      </div>
+
+      <div class="jumbotron text-center" style="margin-bottom:0;background-color:white;">
+        <span class="glyphicon glyphicon-user"> HanJoohyun</span><br>
+        <span class="glyphicon glyphicon-star"> 3billion,BioinformaticsEngineer</span><br>
+        <span class="glyphicon glyphicon-education"> SNU,MedicalInformatics</span><br>
+        <span class="glyphicon glyphicon-envelope"> kenneth.jh.han@snu.ac.kr</span><br>
+        <span class="glyphicon glyphicon-home"> <a href="https://korbillgates.tistory.com">korbillgates.tistory.com</a></span><br>
+      </div>
+    </div>
+    <script>
+      // jQuery로 #removeBtn이 클릭될 때 #seq의 val을 "" 로 설정되게 한다.
+    </script>
+  </body>
+</html>

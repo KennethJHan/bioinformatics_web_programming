@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bioinformatics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Roboto:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">Bioinformatics</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/dnacounter">DNA Counter</a></li>
+            <li><a href="/gc">GC Calculator</a></li>
+            <li class="active"><a href="/revcomp">Reverse Complementary</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <!-- form 의 메서드는 post 로 합니다 -->
+          <form action="/revcomp" method="">
+            <textarea id="seq" name="seq" rows="4" cols="50"></textarea><br>
+            <!-- 다음 p 태그에 두 개의 체크박스를 만들어 보세요 -->
+            <!-- input type="checkbox" name="rev" value="" -->
+            <!-- input type="checkbox" name="comp" value="" -->
+            <!-- button id="countBtn" 인 버튼을 만들어보세요 -->
+          </form>
+        </div>
+        <br>
+        <div class="row">
+          <p>option: <%= option %></p>
+          <p>input : <%= input %></p>
+          <p>result: <%= result %></p>
+        </div>
+      </div>
+
+      <div class="jumbotron text-center" style="margin-bottom:0;background-color:white;">
+        <span class="glyphicon glyphicon-user"> HanJoohyun</span><br>
+        <span class="glyphicon glyphicon-star"> 3billion,BioinformaticsEngineer</span><br>
+        <span class="glyphicon glyphicon-education"> SNU,MedicalInformatics</span><br>
+        <span class="glyphicon glyphicon-envelope"> kenneth.jh.han@snu.ac.kr</span><br>
+        <span class="glyphicon glyphicon-home"> <a href="https://korbillgates.tistory.com">korbillgates.tistory.com</a></span><br>
+      </div>
+    </div>
+    <script>
+      $("#removeBtn").click(function(){
+        $("#seq").val("");
+      });
+    </script>
+  </body>
+</html>

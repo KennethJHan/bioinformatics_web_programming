@@ -1,0 +1,38 @@
+var express = require('express');
+var router = express.Router();
+
+// get
+router.get('/', function(req, res, next) {
+  res.render('gc', {gcp:0});
+});
+
+// post
+router.post('/', function(req, res, next) {
+  console.log("## post");
+  var a=0, c=0, g=0, t=0, gcp=0;
+  var seq = req.body.seq;
+  seq = seq.toUpperCase();
+  console.log(req.body);
+  console.log("seq: "+seq);
+  if(seq){
+    for(i=0;i<seq.length;i++) {
+        if(seq[i] == "A"){
+            a += 1;
+        } else if(seq[i] == "C") {
+            c += 1;
+        } else if(seq[i] == "G") {
+            g += 1;
+        } else if(seq[i] == "T") {
+            t += 1;
+        }
+    }
+    gcp = (c+g) / (a+c+g+t) * 100;
+    gcp = Math.round(gcp*100)/100;
+    console.log("a: "+a+",c: "+c+",g: "+g+",t: "+t);
+    console.log('gc: '+gcp);
+  }
+  
+  res.render('gc', { gcp: gcp });
+});
+
+module.exports = router;

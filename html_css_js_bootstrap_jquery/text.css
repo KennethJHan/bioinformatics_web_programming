@@ -1,0 +1,11 @@
+body {
+    background-color: lightgray;
+}
+h1 {
+    background-color: #3C5A99;
+    color: white;
+    text-align: center;
+}
+p {
+    color: rgb(200, 100, 0);
+}

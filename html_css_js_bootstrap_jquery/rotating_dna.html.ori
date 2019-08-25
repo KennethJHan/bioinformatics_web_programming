@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>돌아가는 DNA</title>
+    </head>
+    <body>
+        <h2>Rotating DNA</h2>
+        <img id="dna_image" src="dna_rotate_1.gif">
+        <br>
+        <button id="dna_button" onclick="reverse()">click</button>
+
+        <script>
+            function reverse() {
+                var image_src = document.getElementById("dna_image").getAttribute('src');
+                var new_image_src = "";
+                console.log("button clicked: "+image_src);
+                if(image_src == "dna_rotate_1.gif") {
+                    new_image_src = "dna_rotate_2.gif";
+                } else {
+                    new_image_src = "dna_rotate_1.gif";
+                }
+                document.getElementById("dna_image").src=new_image_src;
+            }
+        </script>
+    </body>
+</html>
