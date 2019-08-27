@@ -3,25 +3,30 @@ var router = express.Router();
 
 router.get('/', function(req, res, next) {
   console.log("## get");
-  var a=0, c=0, g=0, t=0;
-  var seq = req.query.seq+"";
-  seq = seq.toUpperCase();
+  // SET "a, c, g, t" to 0
+  var /**/;
+  // SET seq to req.query.seq
+  var seq = /**/;
+  // seq.toUpperCase()
+  seq = /**/;
   console.log("seq: "+seq);
+  // count A, C, G, T
   if(seq){
-    for(i=0;i<seq.length;i++) {
+    for(/*;;*/) {
         if(seq[i] == "A"){
             a += 1;
-        } else if(seq[i] == "C") {
-            c += 1;
-        } else if(seq[i] == "G") {
-            g += 1;
-        } else if(seq[i] == "T") {
-            t += 1;
+        } else if(/**/) {
+            /**/;
+        } else if(/**/) {
+            /**/;
+        } else if(/**/) {
+            /**/;
         }
     }
   }
-  
-  res.render('dnacounter', { cntA:a, cntC:c, cntG:g, cntT:t });
+  // render to dnacounter
+  // pass value. cntA: a, cntC: c, ...
+  res.render('dnacounter', { /**/ });
 });
 
 module.exports = router;

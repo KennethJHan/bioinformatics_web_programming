@@ -5,11 +5,15 @@ import sys
 if len(sys.argv) != 3:
     sys.exit()
 
+def rev(seq):
+    revSeq = seq[::-1]
+    return revSeq
+
 def comp(seq):
     compSeq = ""
-    compDic = {"A":"T","C":"G","G":"C","T":"A"}
+    d = {"A":"T","C":"G","G":"C","T":"A"}
     for s in seq:
-        compSeq += compDic[s]
+        compSeq += d[s]
     return compSeq
 
 seq = sys.argv[1]
@@ -17,11 +21,12 @@ mode = sys.argv[2]
 result = ""
 
 if mode == "rev":
-    result = seq[::-1]
+    result = rev(seq)
 elif mode == "comp":
     result = comp(seq)
 elif mode == "revcomp":
-    result = comp(seq[::-1])
+    result = comp(rev(seq))
 
 print(result)
+
 

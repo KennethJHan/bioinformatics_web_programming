@@ -10,7 +10,8 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
   console.log("## post");
   var a=0, c=0, g=0, t=0, gcp=0;
-  var seq = req.body.seq;
+  /* seq set to req.body.seq */
+  var seq = /**/;
   seq = seq.toUpperCase();
   console.log(req.body);
   console.log("seq: "+seq);
@@ -26,13 +27,15 @@ router.post('/', function(req, res, next) {
             t += 1;
         }
     }
-    gcp = (c+g) / (a+c+g+t) * 100;
-    gcp = Math.round(gcp*100)/100;
+    /* calc gc percent */
+    gcp = /**/;
+    /* round using Math.round() */
+    gcp = /**/;
     console.log("a: "+a+",c: "+c+",g: "+g+",t: "+t);
     console.log('gc: '+gcp);
   }
-  
-  res.render('gc', { gcp: gcp });
+  /* render gcp : gcp */
+  res.render('gc', {/**/});
 });
 
 module.exports = router;

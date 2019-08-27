@@ -15,11 +15,12 @@ router.post('/', function(req, res, next) {
   var option = "";
   seq = seq.toUpperCase();
   if(req.body.rev !== undefined)
-    option += "rev";
+    option += /**/; // add option "rev"
   if(req.body.comp !== undefined)
-    option += "comp";
+    option += /**/; // add option "comp"
 
-  var cmd = "python public/scripts/revComp.py "+seq+" "+option;
+  /* set cmd as python public/scripts/revComp.py [seq] [option] */
+  var cmd = /**/;
   console.log("cmd: "+cmd);
   console.log("seq: "+seq);
   console.log("opt: "+option);
